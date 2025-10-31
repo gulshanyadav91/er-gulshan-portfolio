@@ -1,0 +1,98 @@
+.profile-section {
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+  background-color: #131516;
+  color: white;
+  padding: 80px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(270deg, #df8908, #b415ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile-section p {
+  color: #cbd5e1;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  border-color: var(--hover-color);
+  box-shadow: 0 0 25px var(--hover-color);
+  transform: scale(1.05);
+}
+
+.profile-card:hover .profile-icon {
+  transform: scale(1.2);
+}
+
+.profile-card h3 {
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 1024px) {
+  .profile-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 60px 40px;
+  }
+  .profile-section h1 {
+    font-size: 2.2rem;
+  }
+  .profile-section p {
+    font-size: 1rem;
+  }
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
